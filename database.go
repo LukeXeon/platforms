@@ -17,7 +17,6 @@
 package platforms
 
 import (
-	"runtime"
 	"strings"
 )
 
@@ -61,7 +60,7 @@ func isKnownArch(arch string) bool {
 
 func normalizeOS(os string) string {
 	if os == "" {
-		return runtime.GOOS
+		return defaultOS
 	}
 	os = strings.ToLower(os)
 
